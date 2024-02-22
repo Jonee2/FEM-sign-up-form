@@ -13,19 +13,23 @@
 <body>
 <main>
   <div id="title">
-  <h1 class="parawhite">Learn to code by<br> watching others</h1>
+  <h1 class="parawhite">Learn to code by watching others</h1>
 
-  <p class="parawhite">See how experienced developers solve problems in real-time.<br> Watching scripted tutorials is great, 
-  but understanding how <br>developers think is invaluable.</p>
+  <p class="parawhite">See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
+  but understanding how developers think is invaluable.</p>
  </div>
   <div id="form">
     <p class="blue"><span>Try it free 7 days </span>then $20/mo. thereafter</p>
   <div id="formmain">
     <form>
-  <input type="text" placeholder="First Name">
-  <input type="text" placeholder="Last Name"> 
-  <input type="email" placeholder="Email Address">
-  <input type="password" placeholder="Password">
+  <input class='inputmissing' type="text" placeholder="First Name">
+  <p class="missing">First name cannot be empty</p>
+  <input class='inputmissing' type="text" placeholder="Last Name">
+  <p class="missing">Last name cannot be empty</p>
+  <input class='inputmissing' type="email" placeholder="Email Address">
+  <p class="missing">That's not a valid e-mail address</p>
+  <input class='inputmissing' type="password" placeholder="Password">
+  <p class="missing">Password cannot be empty</p>
   </form>
   <button>
   Claim your free trial 
