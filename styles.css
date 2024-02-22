@@ -68,16 +68,18 @@ input{
     margin: 10px;
     padding: 10px;
     border-radius:5px;
-    border: solid 1px;
+    border: solid 1px black;
     margin-left: 30px;
     margin-right: 30px;
+    opacity: 1;
 }
 input:first-child{
     margin-top: 40px;
 }
 input::placeholder{
     font-weight: 700;
-
+    padding: 20px;
+    opacity: 1;
 }
 button{
     width: 90%;
@@ -107,13 +109,15 @@ a{
 .missing{
     color: hsl(0, 100%, 74%);
     text-align: end;
-    margin-right: 50px;
     font-size: small;
+    display: none;
 }
 .inputmissing{
     border: solid hsl(0, 100%, 74%);
 }
 .inputmissing::placeholder{
-    background-image: url(images/icon-error.svg)no-repeat 10px left;
-    background-size: 20px;
+    background-image: url(images/icon-error.svg) no-repeat 10px left;
+}
+#emailmissing::placeholder{
+
 }
