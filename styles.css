@@ -134,8 +134,13 @@ a{
     border: solid hsl(0, 100%, 74%);
 }
 .inputmissing::placeholder{
-    background-image: url(images/icon-error.svg) no-repeat 10px left;
+    background-image: url(images/icon-error.svg);
+    background-repeat: no-repeat;
+    background-position: 490px 15px;
+    color: white;
 }
-#emailmissing::placeholder{
-  /* color:hsl(0, 100%, 74%); */
+.emailplacemissing::placeholder{
+   color:hsl(0, 100%, 74%);
+   background-image: url(images/icon-error.svg) left ;
+   background-repeat: no-repeat;
 }

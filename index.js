@@ -11,10 +11,12 @@ $(document).ready(function () {
         let usernameValue = $("#firstname").val();
         if (usernameValue.length == "") {
             $(".firstmissing").show();
+            $('#firstname').addClass("inputmissing");
             usernameError = false;
             return false;
         } else {
             $(".firstmissing").hide();
+            $('#firstname').removeClass('inputmissing')
         }
     }
   $(".lastmissing").hide();
@@ -27,30 +29,37 @@ $(document).ready(function () {
         let usernameValue = $("#lastname").val();
         if (usernameValue.length == "") {
             $(".lastmissing").show();
+            $('#lastname').addClass('inputmissing')
             lastnameError = false;
             return false;
         } else {
-            $(".firstmissing").hide();
+            $(".lastmissing").hide();
+            $('#lastname').removeClass('inputmissing')
         }
     }
-     $(".emailmissing").hide();
+    $(".emailmissing").hide();
     let emailError = true;
     $("#email").keyup(function () {
         validateEmail();
     });
+    
+    function validateEmail() {
         const email = document.querySelector("#email");
-        email.addEventListener("blur", () => {
-            let regex =
-                /^([_\-\.0-9a-zA-Z]+)@([_\-\.0-9a-zA-Z]+)\.([a-zA-Z]){2,7}$/;
-            let s = email.value;
-            if (regex.test(s)) {
-                email.classList.remove(".emailmissing");
-                emailError = true;
-            } else {
-                email.classList.add(".emailmissing");
-                emailError = false;
-            }
-        });
+        let regex =
+            /^[a-zA-Z0-9. _-]+@[a-zA-Z0-9. -]+\. [a-zA-Z]{2,4}$/;
+        let s = email.value;
+        if (regex.test(s)) {
+            $(".emailmissing").hide();
+            $('#email').removeClass(".inputmissing");
+            emailError = true;
+        } else {
+            $(".emailmissing").show();
+            $('#email').addClass("inputmissing");
+            $('#email').addClass("emailplacemissing");
+            $('#email').attr('placeholder', 'email@example.com')
+            emailError = false;
+        }
+    }
     $(".passwordmissing").hide();
     let passwordError = true;
     $("#password").keyup(function () {
@@ -60,10 +69,12 @@ $(document).ready(function () {
         let passwordValue = $("#password").val();
         if (passwordValue.length == "") {
             $(".passwordmissing").show();
+            $('#password').addClass('inputmissing')
             passwordError = false;
             return false;
         } else {
             $(".passwordmissing").hide();
+            $('#password').removeClass('inputmissing')
         }
     }
     $("button").click(function () {
@@ -82,4 +93,4 @@ $(document).ready(function () {
             return false;
         }
     });
-    });
+})
