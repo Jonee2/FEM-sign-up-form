@@ -37,7 +37,6 @@ h1{
     float: right;
     margin-right: 300px;
     width: 30%;    
-    text-align: center;
     padding-right: 100px;
 }
 #formmain{
@@ -101,14 +100,33 @@ button:hover{
  font-size: 10px;
  padding-bottom: 40px;
  font-weight: 500;
+text-align: center;
 }
 a{
     text-decoration: none;
     color: hsl(0, 100%, 74%);
 }
-.missing{
+.firstmissing{
     color: hsl(0, 100%, 74%);
-    text-align: end;
+    margin-left: 350px;
+    font-size: small;
+    display: none;
+}
+.lastmissing {
+    color: hsl(0, 100%, 74%);
+    margin-left: 350px;
+    font-size: small;
+    display: none;
+}
+.passwordmissing {
+    color: hsl(0, 100%, 74%);
+    margin-left: 350px;
+    font-size: small;
+    display: none;
+}
+.emailmissing {
+    color: hsl(0, 100%, 74%);
+    margin-left: 350px;
     font-size: small;
     display: none;
 }
@@ -119,5 +137,5 @@ a{
     background-image: url(images/icon-error.svg) no-repeat 10px left;
 }
 #emailmissing::placeholder{
-
+  /* color:hsl(0, 100%, 74%); */
 }
